@@ -9,8 +9,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
              --output eDP-1-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
       bspc monitor HDMI-0 -d 1 2 3 4 5
       bspc monitor eDP-1-1 -d 6 7 8 9 10
-      polybar main &
-      polybar laptop &
+      exec ~/.config/polybar/launch.sh &
 fi
 
 if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
@@ -19,7 +18,7 @@ if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
              --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output HDMI-0 --off 
       bspc monitor eDP-1-1 -d 1 2 3 4 5
-      polybar laptop &
+      exec ~/.config/polybar/launch.sh &
 fi
 bspc config border_width         2
 bspc config window_gap          12
@@ -29,11 +28,12 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Autostart
-nitrogen --restore &
-picom &
+exec ~/.config/bspwm/autostart &
 
 # Colors
-bspc config focused_border_color \#61afef
+bspc config focused_border_color        "#61afef"
+bspc config normal_border_color         "#1e2127"
+bspc config urgent_border_color         "#e06c75"
 
 # Rules
 bspc rule -a firefox desktop=^2
