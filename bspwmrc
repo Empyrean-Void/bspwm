@@ -1,11 +1,12 @@
 #! /bin/sh
 
+# Sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
 
- if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
+# Monitors, workspaces, and polybar
+if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
    then
-      xrandr --output DP-0 --off \
-             --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal \
+      xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output eDP-1-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
       bspc monitor HDMI-0 -d 1 2 3 4 5
       bspc monitor eDP-1-1 -d 6 7 8 9 10
@@ -14,12 +15,13 @@ fi
 
 if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
    then
-      xrandr --output DP-0 --off \
-             --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal \
+      xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output HDMI-0 --off 
       bspc monitor eDP-1-1 -d 1 2 3 4 5
       exec ~/.config/polybar/launch.sh &
 fi
+
+# Borders and gaps
 bspc config border_width         2
 bspc config window_gap          12
 
@@ -30,6 +32,9 @@ bspc config gapless_monocle      true
 # Autostart
 exec ~/.config/bspwm/autostart &
 
+# Low battery warning
+exec ~/.config/bspwm/battery-notify &
+
 # Colors
 bspc config focused_border_color        "#61afef"
 bspc config normal_border_color         "#1e2127"
@@ -37,3 +42,4 @@ bspc config urgent_border_color         "#e06c75"
 
 # Rules
 bspc rule -a firefox desktop=^2
+bspc rule -a Thunar state="floating"
