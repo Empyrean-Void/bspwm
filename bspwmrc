@@ -78,4 +78,4 @@ bspc config gapless_monocle      true
 bspc rule -a firefox desktop=^2
 bspc rule -a Thunar state=floating
 bspc rule -a Zathura state=tiled
-bspc rule -a zoom state=floating desktop=^3
+bspc rule -a zoom desktop=^3
