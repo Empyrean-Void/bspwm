@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd -c ~/.config/bspwm/sxhkdrc > /dev/null || sxhkd &
 
 # Monitors, workspaces, and polybar
 if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
