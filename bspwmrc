@@ -1,38 +1,67 @@
 #! /bin/sh
 
 #
-## General
+## General settings
 #
 
-# Set Bspwm config directory
+# Set config directories
 BSPDIR="$HOME/.config/bspwm/"
+BARDIR="$HOME/.config/polybar/"
 
-# Sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd &
+## Run java applications without issues
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-# Monitors, workspaces, and polybar
+#
+## Display settings
+#
+
+# External monitor
 if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
    then
       xrandr --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output eDP-1-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
       bspc monitor HDMI-0 -d 1 2 3 4 5
       bspc monitor eDP-1-1 -d 6 7 8 9 10
-      exec ~/.config/polybar/launch.sh &
+      exec $BARDIR/launch.sh &
 fi
 
+# Internel monitor (Nvidia)
 if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
    then
       xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output HDMI-0 --off 
       bspc monitor eDP-1-1 -d 1 2 3 4 5
-      exec ~/.config/polybar/launch.sh &
+      exec $BARDIR/launch.sh &
 fi
 
+# Internal monitor (Intel)
 if [[ $(xrandr -q | grep "eDP1") ]];
   then
     bspc monitor eDP1 -d 1 2 3 4 5
-    exec ~/.config/polybar/launch-intel.sh &
+    exec $BARDIR/launch-intel.sh &
 fi
+
+#
+## Autostart
+#
+
+# Sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd -c $BSPDIR/sxhkdrc &
+
+# Applications
+exec $BSPDIR/scripts/autostart &
+
+# Low battery warning
+exec $BSPDIR/scripts/battery-notify &
+
+#
+## Appearance settings
+#
+
+# Colors
+bspc config focused_border_color        "#61afef"
+bspc config normal_border_color         "#1e2127"
+bspc config urgent_border_color         "#e06c75"
 
 # Borders and gaps
 bspc config border_width         2
@@ -42,18 +71,10 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-# Autostart
-exec $BSPDIR/scripts/autostart &
+#
+## Window rules
+#
 
-# Low battery warning
-exec $BSPDIR/scripts/battery-notify &
-
-# Colors
-bspc config focused_border_color        "#61afef"
-bspc config normal_border_color         "#1e2127"
-bspc config urgent_border_color         "#e06c75"
-
-# Rules
 bspc rule -a firefox desktop=^2
 bspc rule -a Thunar state=floating
 bspc rule -a Zathura state=tiled
