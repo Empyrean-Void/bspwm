@@ -1,7 +1,14 @@
 #! /bin/sh
 
+#
+## General
+#
+
+# Set Bspwm config directory
+BSPDIR="$HOME/.config/bspwm/"
+
 # Sxhkd
-pgrep -x sxhkd -c ~/.config/bspwm/sxhkdrc > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Monitors, workspaces, and polybar
 if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
@@ -27,9 +34,6 @@ if [[ $(xrandr -q | grep "eDP1") ]];
     exec ~/.config/polybar/launch-intel.sh &
 fi
 
-# Set default layout to master stack
-exec ~/.config/bspwm/master-stack &
-
 # Borders and gaps
 bspc config border_width         2
 bspc config window_gap          12
@@ -39,10 +43,10 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # Autostart
-exec ~/.config/bspwm/autostart &
+exec $BSPDIR/scripts/autostart &
 
 # Low battery warning
-exec ~/.config/bspwm/battery-notify &
+exec $BSPDIR/scripts/battery-notify &
 
 # Colors
 bspc config focused_border_color        "#61afef"
@@ -53,3 +57,4 @@ bspc config urgent_border_color         "#e06c75"
 bspc rule -a firefox desktop=^2
 bspc rule -a Thunar state=floating
 bspc rule -a Zathura state=tiled
+bspc rule -a zoom state=floating desktop=^3

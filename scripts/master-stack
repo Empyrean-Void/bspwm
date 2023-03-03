@@ -1,6 +1,5 @@
 #! /bin/sh
 
-bspc config automatic_scheme alternate
 bsp-layout set tall 1
 bsp-layout set tall 2
 bsp-layout set tall 3
