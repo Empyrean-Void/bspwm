@@ -21,6 +21,15 @@ if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
       exec ~/.config/polybar/launch.sh &
 fi
 
+if [[ $(xrandr -q | grep "eDP1") ]];
+  then
+    bspc monitor eDP1 -d 1 2 3 4 5
+    exec ~/.config/polybar/launch-intel.sh &
+fi
+
+# Set default layout to master stack
+exec ~/.config/bspwm/master-stack &
+
 # Borders and gaps
 bspc config border_width         2
 bspc config window_gap          12
@@ -42,4 +51,5 @@ bspc config urgent_border_color         "#e06c75"
 
 # Rules
 bspc rule -a firefox desktop=^2
-bspc rule -a Thunar state="floating"
+bspc rule -a Thunar state=floating
+bspc rule -a Zathura state=tiled
