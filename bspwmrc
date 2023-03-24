@@ -46,7 +46,7 @@ fi
 #
 
 # Sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Applications
 exec $BSPDIR/scripts/autostart &
