@@ -13,24 +13,52 @@ super + a
 super + Escape
 	exec ~/.config/rofi/bin/powermenu
 
+alt + Tab
+	rofi -show window
 # web browser
 super + w
-	firefox
+	brave
 
-
-# file managers
-
-# ranger (console)
+# file manager
 super + shift + f
-	alacritty -e ranger
-
-# thunar (graphical)
-super + alt + f
 	thunar
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
 	pkill -USR1 -x sxhkd
+
+# volume control
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute pactl
+	set-source-mute @DEFAULT_SOURCE@ toggle
+
+# media playback
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioStop
+	playerctl stop
+
+# brightness control
+XF86MonBrightnessUp
+	brightnessctl set +10%
+
+XF86MonBrightnessDown
+	brightnessctl set 10%-
 
 #
 # bspwm hotkeys
