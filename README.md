@@ -7,12 +7,16 @@ Dotfiles for my Bspwm rice.
 - **Bspwm** (Window manager)
 - **Sxhkd** (Shortcut daemon)
 - **Polybar** (Panel)
+- **Nitrogen** (Wallpaper)
+- **Picom** (Compositor)
+- **Numlockx** (Enable num lock)
+- **Polkit Gnone** (polkit)
 
 ## Install
 
 - Install the needed dependencies:
 
-`yay -S bspwm sxhkd polybar`
+`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome`
 
 - Backup your old Bspwm (if applicable):
 
