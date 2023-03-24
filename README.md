@@ -18,7 +18,7 @@ Dotfiles for my Bspwm rice.
 
 `yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome`
 
-- Backup your old Bspwm (if applicable):
+- Backup your old Bspwm config (if applicable):
 
 `mv ~/.config/bspwm/ ~/.config/bspwm.bak/`
 
