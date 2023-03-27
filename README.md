@@ -28,7 +28,7 @@ Dotfiles for my Bspwm rice.
 
 ## Screenshots
 
-<img src="images/screenshot.png" width="800" height="500">
+<img src="images/screenshot.png" width="960" height="540">
 
 ## Extras
 
