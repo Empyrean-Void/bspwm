@@ -26,6 +26,14 @@ Dotfiles for my Bspwm rice.
 
 `git clone --depth-1 https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/`
 
+## Screenshots
+
+**Voyage**
+<img src="images/voyage.png" width="500" height="400">
+
+**Voyage Alt**
+<img src="images/voyage-alt.png" width="500" height="400">
+
 ## Extras
 
 For a complete setup, visit my other repositories.
