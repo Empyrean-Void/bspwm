@@ -30,8 +30,6 @@ Dotfiles for my Bspwm rice.
 
 <img src="images/screenshot.png" width="1000" height="500">
 
-<img src="images/screenshot-alt.png" width="1000" height="500">
-
 ## Extras
 
 For a complete setup, visit my other repositories.
