@@ -28,9 +28,9 @@ Dotfiles for my Bspwm rice.
 
 ## Screenshots
 
-<img src="images/voyage.png" width="800" height="600">
+<img src="images/voyage.png" width="800" height="400">
 
-<img src="images/voyage-alt.jpg" width="800" height="600">
+<img src="images/voyage-alt.jpg" width="800" height="400">
 
 ## Extras
 
