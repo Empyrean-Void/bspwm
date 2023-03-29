@@ -57,9 +57,14 @@ then
         then
             notify-send --urgency=critical "$bat_percent% : Low Battery!"
             launched=$((launched+1))
+        elif [[ "$bs" = "Discharging" ]]
+        then
+            notify-send --urgency=normal "$bat_percent% : Discharging!"
+            launched=$((launched+1))
         elif [[ "$bs" = "Charging" ]]
         then
-            launched=0
+            notify-send --urgency=normal "$bat_percent% : Charging!"
+            launched=$((launched+1))
         fi
         sleep $POLL_INTERVAL
     done
