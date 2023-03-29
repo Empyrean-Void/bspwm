@@ -75,6 +75,6 @@ bspc config gapless_monocle      true
 ## Window rules
 #
 
-bspc rule -a Brave-browser desktop=^2
+bspc rule -a Chromium desktop=^2
 bspc rule -a Thunar state=floating
 bspc rule -a zoom desktop=^3
