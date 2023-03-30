@@ -10,13 +10,14 @@ Dotfiles for my Bspwm rice.
 - **Nitrogen** (Wallpaper)
 - **Picom** (Compositor)
 - **Numlockx** (Enable num lock)
-- **Polkit Gnone** (polkit)
+- **Polkit Gnone** (Policy kit)
+- **Dunst** (Notifications)
 
 ## Install
 
 - Install the needed dependencies:
 
-`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome`
+`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome dunst`
 
 - Backup your old Bspwm config (if applicable):
 
@@ -26,9 +27,17 @@ Dotfiles for my Bspwm rice.
 
 `git clone --depth-1 https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/`
 
+## Autostart
+
+**It should be noted that certain autostart items (such as keyboard rgb) are highly specific to my system.**
+
+### Configuration
+
+To configure autostart items edit the autostart file found in the scripts directory.
+
 ## Screenshots
 
-<img src="images/screenshot.png" width="800" height="500">
+<img src="images/screenshot.png" width="800" height="450">
 
 ## Extras
 
