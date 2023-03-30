@@ -17,7 +17,7 @@ Dotfiles for my Bspwm rice.
 
 - Install the needed dependencies:
 
-`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome`
+`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome dunst`
 
 - Backup your old Bspwm config (if applicable):
 
