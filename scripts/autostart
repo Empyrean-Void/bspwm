@@ -2,3 +2,4 @@ nitrogen --restore &
 picom &
 numlockx &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec ~/.config/keyboard-rgb/legion-kb-rgb load-profile --path ~/.config/keyboard-rgb/voyage-ripple.json &
