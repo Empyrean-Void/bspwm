@@ -51,8 +51,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Applications
 exec $BSPDIR/scripts/autostart &
 
-# Low battery warning
-exec $BSPDIR/scripts/battery-notify &
+# Battery notifications
+exec $BSPDIR/scripts/battery-notify.sh &
 
 #
 ## Appearance settings
