@@ -6,7 +6,6 @@
 
 # Set config directories
 BSPDIR="$HOME/.config/bspwm/"
-BARDIR="$HOME/.config/polybar/"
 
 ## Run java applications without issues
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -22,7 +21,7 @@ if [[ $(xrandr -q | grep "HDMI-0 connected") ]];
              --output eDP-1-1 --mode 1920x1080 --pos 0x1080 --rotate normal 
       bspc monitor HDMI-0 -d 1 2 3 4 5
       bspc monitor eDP-1-1 -d 6 7 8 9 10
-      exec $BARDIR/scripts/launch-nvidia.sh &
+      exec $BSPDIR/themes/polybar.sh &
 fi
 
 # Internel monitor (Nvidia)
@@ -31,14 +30,14 @@ if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
       xrandr --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal \
              --output HDMI-0 --off 
       bspc monitor eDP-1-1 -d 1 2 3 4 5
-      exec $BARDIR/scripts/launch-nvidia.sh &
+      exec $BSPDIR/themes/polybar.sh &
 fi
 
 # Internal monitor (Intel)
 if [[ $(xrandr -q | grep "eDP1") ]];
   then
     bspc monitor eDP1 -d 1 2 3 4 5
-    exec $BARDIR/scripts/launch-intel.sh &
+    exec $BSPDIR/themes/polybar.sh &
 fi
 
 #
@@ -59,17 +58,32 @@ exec $BSPDIR/scripts/battery-notify.sh &
 #
 
 # Colors
-bspc config focused_border_color        "#61afef"
-bspc config normal_border_color         "#1e2127"
-bspc config urgent_border_color         "#c678dd"
+BSPWM_FBC='#61afef'
+BSPWM_NBC='#1e2127'
+BSPWM_ABC='#61afef'
+BSPWM_PFC='#98c379'
 
-# Borders and gaps
-bspc config border_width         2
-bspc config window_gap          12
+# Gaps and borders
+BSPWM_BORDER='2'
+BSPWM_GAP='12'
+BSPWM_SRATIO='0.50'
 
-bspc config split_ratio          0.50
+# Apply settings
+bspc config focused_border_color "$BSPWM_FBC"
+bspc config normal_border_color "$BSPWM_NBC"
+bspc config active_border_color "$BSPWM_ABC"
+bspc config presel_feedback_color "$BSPWM_PFC"
+
+bspc config border_width "$BSPWM_BORDER"
+bspc config window_gap "$BSPWM_GAP"
+bspc config split_ratio "$BSPWM_SRATIO"
+
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
+bspc config presel_feedback true
 
 #
 ## Window rules
