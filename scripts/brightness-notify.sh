@@ -1,11 +1,4 @@
 #!/bin/sh
-# backlight up icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.
-# backlight down icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.
-# Credit from https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a & https://wiki.archlinux.org/title/Dunst  .
-
-# You can call this script like this:
-# $./screenlight.sh up
-# $./screenlight.sh down
 
 bar_color="#61afef"
 
