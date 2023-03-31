@@ -57,45 +57,27 @@ apply_polybar() {
 # Rofi --------------------------------------
 apply_rofi() {
 	# modify rofi scripts
-	sed -i -e "s/STYLE=.*/STYLE=\"$THEME\"/g" \
-		${PATH_BSPWM}/scripts/rofi_askpass \
-		${PATH_BSPWM}/scripts/rofi_asroot \
-		${PATH_BSPWM}/scripts/rofi_launcher \
-		${PATH_BSPWM}/scripts/rofi_music \
-		${PATH_BSPWM}/scripts/rofi_powermenu \
-		${PATH_BSPWM}/scripts/rofi_runner \
-		${PATH_BSPWM}/scripts/rofi_screenshot \
-		${PATH_BSPWM}/scripts/rofi_themes \
-		${PATH_BSPWM}/scripts/rofi_windows
-	
-	# apply default theme fonts
-	sed -i -e "s/font:.*/font: \"$rofi_font\";/g" ${PATH_ROFI}/shared/fonts.rasi
+		sed -i -e "s/STYLE=.*/STYLE=\"$THEME\"/g" \
+			${PATH_BSPWM}/scripts/launcher.sh \
+			${PATH_BSPWM}/scripts/powermenu.sh \
+			${PATH_BSPWM}/scripts/power-save.sh \
+			${PATH_BSPWM}/scripts/rofi-wifi-menu.sh \
 
 	# rewrite colors file
-	cat > ${PATH_ROFI}/shared/colors.rasi <<- EOF
+	cat > ${PATH_ROFI}/colors.rasi <<- EOF
 		* {
 		    background:     ${background};
 		    background-alt: ${altbackground};
 		    foreground:     ${foreground};
 		    selected:       ${accent};
-		    active:         ${color2};
+		    active:         ${accent};
 		    urgent:         ${color1};
 		}
 	EOF
-
-	# modify icon theme
-	if [[ -f "$PATH_CONF"/rofi/config.rasi ]]; then
-		sed -i -e "s/icon-theme:.*/icon-theme: \"$rofi_icon\";/g" ${PATH_CONF}/rofi/config.rasi
-	fi
 }
 
 # Terminal ----------------------------------
 apply_terminal() {
-	# alacritty : fonts
-	sed -i ${PATH_TERM}/fonts.yml \
-		-e "s/family: .*/family: \"$terminal_font_name\"/g" \
-		-e "s/size: .*/size: $terminal_font_size/g"
-
 	# alacritty : colors
 	cat > ${PATH_TERM}/colors.yml <<- _EOF_
 		## Colors configuration
