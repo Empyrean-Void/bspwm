@@ -7,17 +7,26 @@ Dotfiles for my Bspwm rice.
 - **Bspwm** (Window manager)
 - **Sxhkd** (Shortcut daemon)
 - **Polybar** (Panel)
+
+## Optional Dependencies (Highly recommended)
+
 - **Nitrogen** (Wallpaper)
 - **Picom** (Compositor)
 - **Numlockx** (Enable num lock)
 - **Polkit Gnone** (Policy kit)
 - **Dunst** (Notifications)
+- **Alacritty** (Terminal)
+- **Rofi** (Menu)
 
 ## Install
 
 - Install the needed dependencies:
 
-`yay -S bspwm sxhkd polybar nitrogen picom numlockx polkit-gnome dunst`
+`yay -S bspwm sxhkd`
+
+- Optionally install the following packages:
+
+`yay -S polybar nitrogen picom numlockx polkit-gnome dunst alacritty rofi ttf-iosevka-nerd`
 
 - Backup your old Bspwm config (if applicable):
 
@@ -29,19 +38,14 @@ Dotfiles for my Bspwm rice.
 
 ## Autostart
 
-**It should be noted that certain autostart items (such as keyboard rgb) are highly specific to my system.**
+To configure startup applications edit `scripts/autostart`.
 
-### Configuration
+**Note:** Some autostart items might not be installed as they are specific to my system. When in doubt comment it out.
 
-To configure autostart items edit the autostart file found in the scripts directory.
+## Multi Monitor Support
 
-## Screenshots
+Multi monitors can be setup by editing `bspwmrc`. In the display settings section, configure the correct output names and define your workspace layout.
 
-<img src="images/screenshot.png" width="800" height="450">
+## Themes
 
-## Extras
-
-For a complete setup, visit my other repositories.
-
-- [**Polybar**](https://github.com/Empyrean-Void/polybar.git)
-- [**Rofi**](https://github.com/Empyrean-Void/rofi.git)
+Themes are stored in the `themes` directory. To create a new theme, copy and rename an existing theme and edit `theme.bash`.
