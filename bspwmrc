@@ -50,6 +50,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Applications
 exec $BSPDIR/scripts/autostart &
 
+# Dunst
+exec $BSPDIR/scripts/bspdunst.sh &
+
 # Battery notifications
 exec $BSPDIR/scripts/battery-notify.sh &
 
