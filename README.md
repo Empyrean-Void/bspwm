@@ -37,7 +37,7 @@ To configure autostart items edit the autostart file found in the scripts direct
 
 ## Screenshots
 
-<img src="images/voyage-screenshot.png" width="800" height="450">
+<img src="images/screenshot.png" width="800" height="450">
 
 ## Extras
 
