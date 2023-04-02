@@ -1,6 +1,6 @@
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="voyage"
+STYLE="wave"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 # Run

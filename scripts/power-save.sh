@@ -2,7 +2,7 @@
 # Import Current Theme
 
 DIR="$HOME/.config/bspwm"
-STYLE="voyage"
+STYLE="wave"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 chosen=$(printf "󰾆  Power Save\n󰾅  Balanced\n󰓅  Performance" | rofi -dmenu -config ${RASI} -i -p "Power Mode:")
