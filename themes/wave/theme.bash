@@ -1,30 +1,26 @@
 # Colors
 background='#2e3440'
 foreground='#deddda'
-color0='#1e2127'
-color1='#e06c75'
-color2='#98c379'
-color3='#d19a66'
-color4='#61afef'
-color5='#c678dd'
-color6='#56b6c2'
-color7='#abb2bf'
-color8='#5c6370'
-color9='#e06c75'
-color10='#98c379'
-color11='#d19a66'
-color12='#61afef'
-color13='#c678dd'
-color14='#56b6c2'
+color0='#2e3440'
+color1='#d04c4c'
+color2='#8abd68'
+color3='#deab5f'
+color4='#617cce'
+color5='#85678f'
+color6='#5e8d87'
+color7='#deddda'
+color8='#8f98a5'
+color9='#d04c4c'
+color10='#8abd68'
+color11='#f0c674'
+color12='#81a2be'
+color13='#b294bb'
+color14='#8abeb7'
 color15='#ffffff'
 
-accent='#d40534'
+accent='#d04c4c'
 light_value='0.05'
 dark_value='0.30'
-
-# Wallpaper
-wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-wallpaper="$wdir/wallpaper"
 
 # Polybar
 polybar_font='Iosevka Nerd Font:size=10;2'
@@ -49,7 +45,7 @@ dunst_height='80'
 dunst_offset='10x42'
 dunst_origin='top-right'
 dunst_font='Iosevka Nerd Font 10'
-dunst_border='1'
+dunst_border='2'
 dunst_separator='1'
 
 # Picom

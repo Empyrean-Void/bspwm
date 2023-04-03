@@ -2,16 +2,16 @@
 timeout = 2
 background = "#2e3440"
 foreground = "#deddda"
-frame_color = "#d40534"
+frame_color = "#d04c4c"
 
 [urgency_normal]
 timeout = 5
 background = "#2e3440"
 foreground = "#deddda"
-frame_color = "#d40534"
+frame_color = "#d04c4c"
 
 [urgency_critical]
 timeout = 0
 background = "#2e3440"
-foreground = "#e06c75"
-frame_color = "#e06c75"
+foreground = "#d04c4c"
+frame_color = "#d04c4c"

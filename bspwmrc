@@ -61,10 +61,10 @@ exec $BSPDIR/scripts/battery-notify.sh &
 #
 
 # Colors
-BSPWM_FBC='#d40534'
+BSPWM_FBC='#d04c4c'
 BSPWM_NBC='#2e3440'
-BSPWM_ABC='#d40534'
-BSPWM_PFC='#98c379'
+BSPWM_ABC='#d04c4c'
+BSPWM_PFC='#8abd68'
 
 # Gaps and borders
 BSPWM_BORDER='2'
@@ -92,6 +92,6 @@ bspc config presel_feedback true
 ## Window rules
 #
 
-bspc rule -a Chromium desktop=^2
+bspc rule -a firefoxdeveloperedition desktop=^2
 bspc rule -a Thunar state=floating
 bspc rule -a zoom desktop=^3
