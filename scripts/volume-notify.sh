@@ -1,6 +1,6 @@
 #!/bin/sh
 
-bar_color="#61afef"
+bar_color="#d04c4c"
 volume_step=10
 
 # Uses regex to get volume from pactl
