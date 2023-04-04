@@ -62,7 +62,7 @@ exec $BSPDIR/scripts/battery-notify.sh &
 
 # Colors
 BSPWM_FBC='#d04c4c'
-BSPWM_NBC='#2e3440'
+BSPWM_NBC='#8f98a5'
 BSPWM_ABC='#d04c4c'
 BSPWM_PFC='#8abd68'
 

@@ -60,7 +60,7 @@ picom_blur_strength='0'
 
 # Bspwm
 bspwm_fbc="$accent"
-bspwm_nbc="$background"
+bspwm_nbc="$color8"
 bspwm_abc="$accent"
 bspwm_pfc="$color2"
 bspwm_border='2'
