@@ -23,4 +23,6 @@ launch_bar() {
   fi
 }
 
+killall -q polybar
+
 launch_bar
