@@ -15,7 +15,7 @@ Dotfiles for my Bspwm rice.
 - **Numlockx** (Enable num lock)
 - **Polkit Gnone** (Policy kit)
 - **Dunst** (Notifications)
-- **Alacritty** (Terminal)
+- **Wezterm** (Terminal)
 - **Rofi** (Menu)
 
 ## Install
@@ -26,7 +26,7 @@ Dotfiles for my Bspwm rice.
 
 - Optionally install the following packages:
 
-`yay -S polybar nitrogen picom numlockx polkit-gnome dunst alacritty rofi ttf-iosevka-nerd`
+`yay -S polybar nitrogen picom numlockx polkit-gnome dunst wezterm rofi ttf-iosevka-nerd`
 
 - Backup your old Bspwm config (if applicable):
 
@@ -34,7 +34,7 @@ Dotfiles for my Bspwm rice.
 
 - Clone this repository:
 
-`git clone --depth-1 https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/`
+`git clone https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/`
 
 ## Autostart
 
