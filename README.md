@@ -20,6 +20,18 @@ Dotfiles for my Bspwm rice.
 
 ## Install
 
+### Script based
+
+- Download the install script:
+
+`wget https://raw.githubusercontent.com/Empyrean-Void/bspwm/main/scripts/install.sh`
+
+- Execute the script:
+
+`./install.sh`
+
+### Building from source
+
 - Install the needed dependencies:
 
 `yay -S bspwm sxhkd`
