@@ -2,7 +2,7 @@
 
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="wave"
+STYLE="samurai"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 # List Available Themes

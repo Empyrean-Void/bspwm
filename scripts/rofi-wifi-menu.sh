@@ -3,7 +3,7 @@
 # Import Current Theme
 
 DIR="$HOME/.config/bspwm"
-STYLE="wave"
+STYLE="samurai"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 notify-send "Getting list of available Wi-Fi networks..."

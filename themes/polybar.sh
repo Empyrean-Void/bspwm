@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## Files and Directories
-STYLE="wave"
+STYLE="samurai"
 
 launch_bar() {
   # External monitor (Nvidia)
