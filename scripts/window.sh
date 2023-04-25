@@ -1,6 +1,6 @@
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="wave"
+STYLE="rose-pine"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 # Run

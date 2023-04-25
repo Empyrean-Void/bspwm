@@ -61,10 +61,10 @@ exec $BSPDIR/scripts/battery-notify.sh &
 #
 
 # Colors
-BSPWM_FBC='#e02f1b'
-BSPWM_NBC='#190c0e'
-BSPWM_ABC='#e02f1b'
-BSPWM_PFC='#8abd68'
+BSPWM_FBC='#31748f'
+BSPWM_NBC='#26233a'
+BSPWM_ABC='#31748f'
+BSPWM_PFC='#31748f'
 
 # Gaps and borders
 BSPWM_BORDER='2'
