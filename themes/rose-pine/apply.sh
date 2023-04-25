@@ -29,7 +29,7 @@ apply_polybar() {
 	cat > ${PATH_PBAR}/colors.ini <<- EOF
 		[color]
 		
-		BACKGROUND = ${background}
+		BACKGROUND = ${polybar_background}
 		FOREGROUND = ${foreground}
 		ALTBACKGROUND = ${altbackground}
 		ALTFOREGROUND = ${altforeground}

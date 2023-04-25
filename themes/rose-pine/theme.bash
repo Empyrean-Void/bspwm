@@ -24,6 +24,7 @@ dark_value='0.30'
 
 # Polybar
 polybar_font='Iosevka Nerd Font:size=10;2'
+polybar_background='#e6191724'
 
 # Rofi
 rofi_font='Iosevka Nerd Font 12'
