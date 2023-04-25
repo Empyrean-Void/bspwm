@@ -50,7 +50,7 @@ dunst_separator='1'
 
 # Picom
 picom_backend='glx'
-picom_corner='5'
+picom_corner='10'
 picom_shadow_r='14'
 picom_shadow_o='0.30'
 picom_shadow_x='-12'
