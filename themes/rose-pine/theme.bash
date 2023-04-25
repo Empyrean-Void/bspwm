@@ -28,7 +28,7 @@ polybar_background='#e6191724'
 
 # Rofi
 rofi_font='Iosevka Nerd Font 12'
-rofi_icon='Vimix-Doder-dark'
+rofi_icon='oomox-rose-pine'
 
 # Terminal
 terminal_font_name='Iosevka Nerd Font'
