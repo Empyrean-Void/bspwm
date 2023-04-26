@@ -92,6 +92,4 @@ bspc config presel_feedback true
 ## Window rules
 #
 
-bspc rule -a firefoxdeveloperedition desktop=^2
-bspc rule -a Thunar state=floating
-bspc rule -a zoom desktop=^3
+bspc rule -a Brave-browser desktop=^2
