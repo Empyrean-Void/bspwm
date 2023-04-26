@@ -12,7 +12,7 @@ altforeground="`pastel color $foreground | pastel darken $dark_value | pastel fo
 ## Directories ------------------------------
 PATH_CONF="$HOME/.config"
 PATH_BSPWM="$PATH_CONF/bspwm"
-PATH_TERM="$PATH_BSPWM/alacritty"
+PATH_TERM="$PATH_BSPWM/kitty"
 PATH_PBAR="$PATH_BSPWM/themes/$THEME/polybar/configs"
 PATH_ROFI="$PATH_BSPWM/themes/$THEME/rofi"
 
@@ -81,7 +81,7 @@ apply_rofi() {
 # Terminal ----------------------------------
 apply_terminal() {
 	# alacritty : colors
-	cat > ${PATH_TERM}/colors.yml <<- _EOF_
+	cat > ${PATH_TERM}/colors.conf <<- _EOF_
 		## Colors configuration
 		colors:
 		  # Default colors
