@@ -33,9 +33,9 @@ apply_polybar() {
 		FOREGROUND = ${foreground}
 		ALTBACKGROUND = ${altbackground}
 		ALTFOREGROUND = ${altforeground}
-		ACCENT = ${accent}
+ACCENT = ${accent}
 		
-		BLACK = ${color0}
+BLACK = ${color0}
 		RED = ${color1}
 		GREEN = ${color2}
 		YELLOW = ${color3}
@@ -80,36 +80,47 @@ apply_rofi() {
 
 # Terminal ----------------------------------
 apply_terminal() {
-	# alacritty : colors
+	# kitty : colors
 	cat > ${PATH_TERM}/colors.conf <<- _EOF_
-		## Colors configuration
-		colors:
-		  # Default colors
-		  primary:
-		    background: '${background}'
-		    foreground: '${foreground}'
+		# Colors configuration
 
-		  # Normal colors
-		  normal:
-		    black:   '${color0}'
-		    red:     '${color1}'
-		    green:   '${color2}'
-		    yellow:  '${color3}'
-		    blue:    '${color4}'
-		    magenta: '${color5}'
-		    cyan:    '${color6}'
-		    white:   '${color7}'
+		background ${background}
+		foreground ${foreground}
 
-		  # Bright colors
-		  bright:
-		    black:   '${color8}'
-		    red:     '${color9}'
-		    green:   '${color10}'
-		    yellow:  '${color11}'
-		    blue:    '${color12}'
-		    magenta: '${color13}'
-		    cyan:    '${color14}'
-		    white:   '${color15}'
+		color0 ${color0}
+		color1 ${color1}
+		color2 ${color2}
+		color3 ${color3}
+		color4 ${color4}
+		color5 ${color5}
+		color6 ${color6}
+		color7 ${color7}
+
+		color8 ${color8}
+		color9 ${color9}
+		color10 ${color10}
+		color11 ${color11}
+		color12 ${color12}
+		color13 ${color13}
+		color14 ${color14}
+		color15 ${color15}
+
+		# Define cursor and selection colors
+    selection_foreground     ${foreground}
+    selection_background     ${selection_background}
+
+    cursor                   ${cursor}
+    cursor_text_color        ${foreground}
+
+    url_color                ${color5}
+
+    active_tab_foreground    ${foreground}
+    active_tab_background    ${color0}
+    inactive_tab_foreground  ${color8}
+    inactive_tab_background  ${background}
+
+    active_border_color      ${color2}
+    inactive_border_color    ${inactive_border}
 	_EOF_
 }
 

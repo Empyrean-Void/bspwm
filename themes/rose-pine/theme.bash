@@ -34,6 +34,10 @@ rofi_icon='oomox-rose-pine'
 terminal_font_name='Iosevka Nerd Font'
 terminal_font_size='10'
 
+selection_background='#403d52'
+cursor='#524f67'
+inactive_border='#403d52'
+
 # Appearance
 gtk_font='Noto Sans 10'
 gtk_theme='vimix-dark-doder'
