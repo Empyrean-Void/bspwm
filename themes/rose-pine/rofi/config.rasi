@@ -4,7 +4,7 @@ configuration {
   drun-display-format: "{name}";
   font: "Iosevka Nerd Font 12";
   modi: "window,run";
-  icon-theme: "Vimix-Doder-dark";
+  icon-theme: "rose-pine-icons";
   show-icons: true;
 }
 
