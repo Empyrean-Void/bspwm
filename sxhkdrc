@@ -28,7 +28,7 @@ alt + Tab
 
 # File manager
 
-super + f
+super + shift + f
   thunar
 
 # Lock screen
