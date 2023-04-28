@@ -1,63 +1,51 @@
 # Bspwm
 
-Dotfiles for my Bspwm rice.
+Bspwm configuration files
 
 ## Dependencies
 
-- **Bspwm** (Window manager)
-- **Sxhkd** (Shortcut daemon)
-- **Polybar** (Panel)
+### Required
 
-## Optional Dependencies (Highly recommended)
+- **Bspwm (Window manager):** https://github.com/baskerville/bspwm
+- **Sxhkd (Hotkey daemon):** https://github.com/baskerville/sxhkd
+- **Polybar (Status bar):** https://github.com/polybar/polybar
+- **Kitty (Terminal emulator):** https://github.com/kovidgoyal/kitty
+- **Polkit Gnome (Run as root):** https://gitlab.gnome.org/Archive/policykit-gnome
+- **Picom (Compositor):** https://github.com/yshui/picom
 
-- **Nitrogen** (Wallpaper)
-- **Picom** (Compositor)
-- **Numlockx** (Enable num lock)
-- **Polkit Gnone** (Policy kit)
-- **Dunst** (Notifications)
-- **Wezterm** (Terminal)
-- **Rofi** (Menu)
+### Optional (Highly recommended)
+
+- **Rofi (Launcher):** https://github.com/DaveDavenport/rofi
+- **Dunst (Notification daemon):** https://dunst-project.org/
+- **Nitrogen (Wallpaper setter):** https://github.com/l3ib/nitrogen/
+- **Numlockx (Enable number lock):** https://github.com/rg3/numlockx
 
 ## Install
 
-### Script based
+### Arch based distros
 
-- Download the install script:
+**Install the required dependencies**
 
-`wget https://raw.githubusercontent.com/Empyrean-Void/bspwm/main/scripts/install.sh`
+```pacman -Syu && pacman -S bspwm sxhkd polybar kitty polkit-gnome picom```
 
-- Execute the script:
+**If desired install the option dependencies**
 
-`./install.sh`
+```pacman -S rofi dunst nitrogen numlockx```
 
-### Building from source
+**Backup your old configurations**
 
-- Install the needed dependencies:
+```cp -r ~/.config/bspwm/ ~/.config/bspwm.bak/```
 
-`yay -S bspwm sxhkd`
+**Clone this repository**
 
-- Optionally install the following packages:
+```git clone https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/```
 
-`yay -S polybar nitrogen picom numlockx polkit-gnome dunst wezterm rofi ttf-iosevka-nerd`
+## Configuration
 
-- Backup your old Bspwm config (if applicable):
+- For Sxhkd and Kitty to work properly, create the following symlinks
 
-`mv ~/.config/bspwm/ ~/.config/bspwm.bak/`
+```ln -s ~/.config/bspwm/sxhkdrc ~/.config/sxhkd/```
 
-- Clone this repository:
+```ln -s ~/.config/bspwm/kitty/kitty.conf ~/.config/kitty/```
 
-`git clone https://github.com/Empyrean-Void/bspwm.git ~/.config/bspwm/`
-
-## Autostart
-
-To configure startup applications edit `scripts/autostart`.
-
-**Note:** Some autostart items might not be installed as they are specific to my system. When in doubt comment it out.
-
-## Multi Monitor Support
-
-Multi monitors can be setup by editing `bspwmrc`. In the display settings section, configure the correct output names and define your workspace layout.
-
-## Themes
-
-Themes are stored in the `themes` directory. To create a new theme, copy and rename an existing theme and edit `theme.bash`.
+```ln -s ~/.config/bspwm/kitty/colors.conf ~/.config/kitty/```
