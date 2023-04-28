@@ -3,7 +3,7 @@
 # Import Current Theme
 
 DIR="$HOME/.config/bspwm"
-STYLE="rose-pine"
+STYLE="gruvbox"
 RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 
 chosen=$(printf "  Power Off\n  Restart\n  Suspend\n  Log Out\n  Lock" | rofi -dmenu -config ${RASI} -i -p "Power Menu:")

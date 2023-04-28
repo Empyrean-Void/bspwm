@@ -61,10 +61,10 @@ exec $BSPDIR/scripts/battery-notify.sh &
 #
 
 # Colors
-BSPWM_FBC='#31748f'
-BSPWM_NBC='#26233a'
-BSPWM_ABC='#31748f'
-BSPWM_PFC='#31748f'
+BSPWM_FBC='#98971a'
+BSPWM_NBC='#282828'
+BSPWM_ABC='#98971a'
+BSPWM_PFC='#98971a'
 
 # Gaps and borders
 BSPWM_BORDER='2'
@@ -93,3 +93,4 @@ bspc config presel_feedback true
 #
 
 bspc rule -a Brave-browser desktop=^2
+bspc rule -a Thunar state=floating
