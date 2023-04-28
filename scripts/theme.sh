@@ -9,7 +9,7 @@ RASI="$DIR/themes/$STYLE/rofi/config.rasi"
 THEMES=(`cd $DIR/themes && ls -d */ | cut -d '/' -f1`)
 
 # Theme Elements
-prompt="Themes"
+prompt="Themes:"
 mesg="<b>Available Themes</b> : `cd $DIR/themes && ls -d */ | cut -d '/' -f1 | wc -l`"
 
 # Rofi CMD

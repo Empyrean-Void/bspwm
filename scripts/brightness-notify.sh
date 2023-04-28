@@ -1,6 +1,6 @@
 #!/bin/sh
 
-bar_color="#d04c4c"
+bar_color="#98971a"
 
 function get_brightness {
      brightnessctl | awk '/Current brightness/ {print substr($NF, 2, length($NF)-3)}'
