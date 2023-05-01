@@ -1,43 +1,54 @@
 # Colors
-background='#282828'
-foreground='#ebdbb2'
-color0='#282828'
-color1='#cc241d'
-color2='#98971a'
-color3='#d79921'
-color4='#458588'
-color5='#b16286'
-color6='#689d6a'
-color7='#a89984'
-color8='#928374'
-color9='#fb4934'
-color10='#b8bb26'
-color11='#fabd2f'
-color12='#83a598'
-color13='#d3869b'
-color14='#8ec07c'
-color15='#ebdbb2'
+background='#1a1b26'
+foreground='#a9b1d6'
+color0='#414868'
+color1='#f7768e'
+color2='#73daca'
+color3='#e0af68'
+color4='#7aa2f7'
+color5='#bb9af7'
+color6='#7dcfff'
+color7='#c0caf5'
+color8='#414868'
+color9='#f7768e'
+color10='#73daca'
+color11='#7aa2f7'
+color12='#bb9af7'
+color13='#7dcfff'
+color14='#c0caf5'
+color15='#414868'
 
-accent='#98971a'
+accent='#7aa2f7'
 light_value='0.05'
 dark_value='0.30'
 
 # Polybar
 polybar_font='Iosevka Nerd Font:size=10;2'
-polybar_background='#e6282828'
+polybar_background='#e61a1b26'
 
 # Rofi
 rofi_font='Iosevka Nerd Font 12'
 rofi_icon='rose-pine-icons'
 
-# Terminal
+# Kitty #
+
+# Font
 terminal_font_name='Iosevka Nerd Font'
 terminal_font_size='10'
+
+# Opacity
 opacity='0.95'
 
-selection_background='#3c3836'
-cursor='#ebdbb2'
-inactive_border='#282828'
+# Selection highlight
+selection_background='#28344a'
+selection_foreground='none'
+
+# Cursor
+cursor='#c0caf5'
+cursor_fg='#1a1b26'
+
+# URL
+url_color='#9ece6a'
 
 # Appearance
 gtk_font='Noto Sans 10'

@@ -8,7 +8,7 @@ super + Return
 
 # Web browser
 super + w
-    brave
+    firefox
 
 # Rofi
 super + r

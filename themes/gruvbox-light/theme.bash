@@ -1,22 +1,22 @@
 # Colors
-background='#282828'
-foreground='#ebdbb2'
-color0='#282828'
+background='#f2e5bc'
+foreground='#3c3836'
+color0='#f2e5bc'
 color1='#cc241d'
 color2='#98971a'
 color3='#d79921'
 color4='#458588'
 color5='#b16286'
 color6='#689d6a'
-color7='#a89984'
+color7='#7c6f64'
 color8='#928374'
-color9='#fb4934'
-color10='#b8bb26'
-color11='#fabd2f'
-color12='#83a598'
-color13='#d3869b'
-color14='#8ec07c'
-color15='#ebdbb2'
+color9='#9d0006'
+color10='#79740e'
+color11='#b57614'
+color12='#076678'
+color13='#8f3f71'
+color14='#8f3f71'
+color15='#3c3836'
 
 accent='#98971a'
 light_value='0.05'
@@ -24,7 +24,7 @@ dark_value='0.30'
 
 # Polybar
 polybar_font='Iosevka Nerd Font:size=10;2'
-polybar_background='#e6282828'
+polybar_background='#f2e5bc'
 
 # Rofi
 rofi_font='Iosevka Nerd Font 12'
@@ -33,11 +33,12 @@ rofi_icon='rose-pine-icons'
 # Terminal
 terminal_font_name='Iosevka Nerd Font'
 terminal_font_size='10'
-opacity='0.95'
 
-selection_background='#3c3836'
-cursor='#ebdbb2'
-inactive_border='#282828'
+selection_background='#f2e5bc'
+cursor='#3c3836'
+inactive_border='#f2e5bc'
+
+opacity='1.0'
 
 # Appearance
 gtk_font='Noto Sans 10'
