@@ -1,7 +1,7 @@
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="tokyonight"
-RASI="$DIR/themes/$STYLE/rofi/config.rasi"
+STYLE="gruvbox"
+RASI="$DIR/themes/$STYLE/rofi/window.rasi"
 
 # Run
 rofi \

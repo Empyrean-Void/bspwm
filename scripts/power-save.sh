@@ -3,7 +3,7 @@
 
 DIR="$HOME/.config/bspwm"
 STYLE="gruvbox"
-RASI="$DIR/themes/$STYLE/rofi/config.rasi"
+RASI="$DIR/themes/$STYLE/rofi/power-save.rasi"
 
 chosen=$(printf "󰾆  Power Save\n󰾅  Balanced\n󰓅  Performance" | rofi -dmenu -config ${RASI} -i -p "Power Mode:")
 

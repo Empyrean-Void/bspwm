@@ -49,3 +49,9 @@ Bspwm configuration files
 ```ln -s ~/.config/bspwm/kitty/kitty.conf ~/.config/kitty/```
 
 ```ln -s ~/.config/bspwm/kitty/colors.conf ~/.config/kitty/```
+
+## Screenshots
+
+**Gruvbox**
+
+<img src="images/screenshots/gruvbox/fetch.png" width="500" height="250">

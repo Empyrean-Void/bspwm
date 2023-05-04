@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "Iosevka Nerd Font 12";
+  font: "JetBrainsMono Nerd Font 12";
   modi: "window,run";
   icon-theme: "rose-pine-icons";
   show-icons: true;
@@ -31,7 +31,10 @@ configuration {
 }
 
 window {
-  width: 50%;
+  location: North West;
+  x-offset: 12px;
+  y-offset: 46px;
+  width: 20%;
   background-color: @background-colour;
   border:                      2px solid;
   border-radius:               10px;

@@ -23,15 +23,15 @@ light_value='0.05'
 dark_value='0.30'
 
 # Polybar
-polybar_font='Iosevka Nerd Font:size=10;2'
+polybar_font='JetBrainsMono Nerd Font:size=10;2'
 polybar_background='#e6282828'
 
 # Rofi
-rofi_font='Iosevka Nerd Font 12'
+rofi_font='JetBrainsMono Nerd Font 12'
 rofi_icon='rose-pine-icons'
 
 # Terminal
-terminal_font_name='Iosevka Nerd Font'
+terminal_font_name='JetBrainsMono Nerd Font'
 terminal_font_size='10'
 opacity='0.95'
 
@@ -50,7 +50,7 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x42'
 dunst_origin='top-right'
-dunst_font='Iosevka Nerd Font 10'
+dunst_font='JetBrainsMono Nerd Font 10'
 dunst_border='2'
 dunst_separator='1'
 

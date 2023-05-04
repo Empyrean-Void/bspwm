@@ -11,7 +11,7 @@ super + w
     firefox
 
 # Rofi
-super + r
+super + a
 	exec ~/.config/bspwm/scripts/launcher.sh
 
 super + Escape

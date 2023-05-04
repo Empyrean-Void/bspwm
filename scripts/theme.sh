@@ -3,7 +3,7 @@
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
 STYLE="gruvbox"
-RASI="$DIR/themes/$STYLE/rofi/config.rasi"
+RASI="$DIR/themes/$STYLE/rofi/theme.rasi"
 
 # List Available Themes
 THEMES=(`cd $DIR/themes && ls -d */ | cut -d '/' -f1`)

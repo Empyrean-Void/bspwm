@@ -4,15 +4,15 @@
 
 DIR="$HOME/.config/bspwm"
 STYLE="gruvbox"
-RASI="$DIR/themes/$STYLE/rofi/config.rasi"
+RASI="$DIR/themes/$STYLE/rofi/power.rasi"
 
-chosen=$(printf "  Power Off\n  Restart\n  Suspend\n  Log Out\n  Lock" | rofi -dmenu -config ${RASI} -i -p "Power Menu:")
+chosen=$(printf "  Power Off\n  Restart\n  Suspend\n󰗽  Log Out\n󰷛  Lock" | rofi -dmenu -config ${RASI} -i -p "Power Menu:")
 
 case "$chosen" in
 	"  Power Off") poweroff ;;
 	"  Restart") reboot ;;
 	"  Suspend") systemctl suspend ;;
-	"  Log Out") bspc quit ;;
-	"  Lock") betterlockscreen -l ;;
+	"󰗽  Log Out") bspc quit ;;
+	"󰷛  Lock") betterlockscreen -l ;;
 	*) exit 1 ;;
 esac

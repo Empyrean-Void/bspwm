@@ -5,4 +5,5 @@
     selected:       #98971a;
     active:         #98971a;
     urgent:         #cc241d;
+    yellow:         #d79921;
 }

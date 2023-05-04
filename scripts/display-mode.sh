@@ -4,7 +4,7 @@
 
 DIR="$HOME/.config/bspwm"
 STYLE="gruvbox"
-RASI="$DIR/themes/$STYLE/rofi/config.rasi"
+RASI="$DIR/themes/$STYLE/rofi/display.rasi"
 
 chosen=$(printf "󰍺  Dual Display\n󰍹  External\n󰍹  Laptop" | rofi -dmenu -config ${RASI} -i -p "Display Mode:")
 
