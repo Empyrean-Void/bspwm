@@ -92,5 +92,4 @@ bspc config presel_feedback true
 ## Window rules
 #
 
-bspc rule -a firefox desktop=2
-bspc rule -a Thunar desktop=3 state=floating
+exec $BSPDIR/scripts/rules.sh &
