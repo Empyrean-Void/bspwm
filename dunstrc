@@ -1,3 +1,6 @@
+[global]
+origin = top-right
+
 [urgency_low]
 timeout = 2
 background = "#282828"
