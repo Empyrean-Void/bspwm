@@ -14,3 +14,9 @@ if [[ $(xrandr -q | grep "HDMI-0 disconnected") ]];
    then
        bspc rule -a discord desktop=5
 fi
+
+# Obs
+bspc rule -a obs desktop=8
+
+# Elden Ring
+bspc rule -a steam_app_1245620 state=floating

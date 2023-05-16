@@ -18,7 +18,7 @@ color13='#d3869b'
 color14='#8ec07c'
 color15='#ebdbb2'
 
-accent='#98971a'
+accent='#83a598'
 light_value='0.05'
 dark_value='0.30'
 

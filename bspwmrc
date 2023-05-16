@@ -36,16 +36,16 @@ exec $BSPDIR/scripts/bspdunst.sh &
 exec $BSPDIR/scripts/battery-notify.sh &
 
 # Notification log
-exec $BSPDIR/scripts/notify-log.sh ~/.log/dunst-log &
+# exec $BSPDIR/scripts/notify-log.sh ~/.log/dunst-log &
 
 #
 ## Appearance settings
 #
 
 # Colors
-BSPWM_FBC='#98971a'
+BSPWM_FBC='#83a598'
 BSPWM_NBC='#282828'
-BSPWM_ABC='#98971a'
+BSPWM_ABC='#83a598'
 BSPWM_PFC='#98971a'
 
 # Gaps and borders
