@@ -2,6 +2,8 @@
 
 Bspwm configuration files
 
+**I have moved to Awesomewm as a daily driver, but will continue to maintain these dots.**
+
 ## Dependencies
 
 ### Required
