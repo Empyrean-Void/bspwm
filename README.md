@@ -2,7 +2,7 @@
 
 Bspwm configuration files
 
-**I am shifting my focus to [Awesome](https://github.com/Empyrean-Void/Awesome.git), but will continue to maintain these dots.**
+**I am considering this product to be feature complete, but will continue to maintain these dots.**
 
 ## Dependencies
 
