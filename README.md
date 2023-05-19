@@ -2,7 +2,7 @@
 
 Bspwm configuration files
 
-**I am considering this product to be feature complete, but will continue to maintain these dots.**
+**I am considering this project to be feature complete, but will continue to maintain these dots.**
 
 ## Dependencies
 
