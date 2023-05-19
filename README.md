@@ -56,4 +56,4 @@ Bspwm configuration files
 
 **Gruvbox**
 
-<img src="images/screenshots/gruvbox/fetch.png" width="500" height="250">
+<img src="images/screenshots/gruvbox/fetch-gruv.png" width="500" height="250">
