@@ -19,4 +19,4 @@ fi
 bspc rule -a obs desktop=8
 
 # Elden Ring
-bspc rule -a steam_app_1245620 state=floating
+bspc rule -a steam_app_1245620 desktop=3
