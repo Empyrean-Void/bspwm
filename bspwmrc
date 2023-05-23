@@ -1,67 +1,77 @@
-#!/usr/bin/env lua
+#! /bin/sh
 
--- General settings
+#
+## General settings
+#
 
+BSPDIR="$HOME/.config/bspwm/"
 
-local BSPDIR = os.getenv("HOME") .. "/.config/bspwm/"
+#
+## Exports
+#
 
+exec $BSPDIR/scripts/exports.sh &
 
--- Exports
+#
+## Display settings
+#
 
-os.execute(BSPDIR .. "scripts/exports.lua &")
+exec $BSPDIR/scripts/display-layout.sh &
+exec $BSPDIR/themes/polybar.sh &
 
+#
+## Autostart
+#
 
--- Display settings
+# Sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
 
-os.execute(BSPDIR .. "scripts/display-layout.lua &")
-os.execute(BSPDIR .. "themes/polybar.sh &")
+# Applications
+exec $BSPDIR/scripts/applications.sh &
 
--- Autostart
+# Dunst
+exec $BSPDIR/scripts/bspdunst.sh &
 
--- Sxhkd
-if os.execute("pgrep -x sxhkd > /dev/null") ~= 0 then
-  os.execute("sxhkd &")
-end
+# Battery notifications
+exec $BSPDIR/scripts/battery-notify.sh &
 
--- Applications
-os.execute(BSPDIR .. "scripts/applications.lua &")
+# Notification log
+# exec $BSPDIR/scripts/notify-log.sh ~/.log/dunst-log &
 
--- Dunst
-os.execute(BSPDIR .. "scripts/bspdunst.lua &")
+#
+## Appearance settings
+#
 
--- Battery notifications
-os.execute(BSPDIR .. "scripts/battery-notify.lua &")
+# Colors
+BSPWM_FBC='#83a598'
+BSPWM_NBC='#282828'
+BSPWM_ABC='#83a598'
+BSPWM_PFC='#98971a'
 
--- Appearance settings
+# Gaps and borders
+BSPWM_BORDER='2'
+BSPWM_GAP='12'
+BSPWM_SRATIO='0.50'
 
--- Colors
-local BSPWM_FBC = "#83a598"
-local BSPWM_NBC = "#282828"
-local BSPWM_ABC = "#83a598"
-local BSPWM_PFC = "#98971a"
+# Apply settings
+bspc config focused_border_color "$BSPWM_FBC"
+bspc config normal_border_color "$BSPWM_NBC"
+bspc config active_border_color "$BSPWM_ABC"
+bspc config presel_feedback_color "$BSPWM_PFC"
 
--- Gaps and borders
-local BSPWM_BORDER = "2"
-local BSPWM_GAP = "12"
-local BSPWM_SRATIO = "0.50"
+bspc config border_width "$BSPWM_BORDER"
+bspc config window_gap "$BSPWM_GAP"
+bspc config split_ratio "$BSPWM_SRATIO"
 
--- Apply settings
-os.execute("bspc config focused_border_color " .. BSPWM_FBC)
-os.execute("bspc config normal_border_color " .. BSPWM_NBC)
-os.execute("bspc config active_border_color " .. BSPWM_ABC)
-os.execute("bspc config presel_feedback_color " .. BSPWM_PFC)
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
+bspc config presel_feedback true
 
-os.execute("bspc config border_width " .. BSPWM_BORDER)
-os.execute("bspc config window_gap " .. BSPWM_GAP)
-os.execute("bspc config split_ratio " .. BSPWM_SRATIO)
+#
+## Window rules
+#
 
-os.execute("bspc config borderless_monocle true")
-os.execute("bspc config gapless_monocle true")
-os.execute("bspc config paddingless_monocle true")
-os.execute("bspc config single_monocle false")
-os.execute("bspc config focus_follows_pointer true")
-os.execute("bspc config presel_feedback true")
-
--- Window rules
-
-os.execute(BSPDIR .. "scripts/rules.lua &")
+exec $BSPDIR/scripts/rules.sh &
