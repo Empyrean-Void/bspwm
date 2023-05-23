@@ -12,19 +12,19 @@ super + w
 
 # Rofi
 super + a
-	exec ~/.config/bspwm/scripts/launcher.sh
+	exec ~/.config/bspwm/scripts/launcher.lua
 
 super + Escape
-    exec ~/.config/bspwm/scripts/powermenu.sh
+    exec ~/.config/bspwm/scripts/powermenu.lua
 
 super + m
-    exec ~/.config/bspwm/scripts/display-mode.sh
+    exec ~/.config/bspwm/scripts/display-mode.lua
 
 super + shift + t
     exec ~/.config/bspwm/scripts/theme.sh
 
 alt + Tab
-    exec ~/.config/bspwm/scripts/window.sh
+    exec ~/.config/bspwm/scripts/window.lua
 
 # File manager
 
@@ -37,13 +37,13 @@ ctrl + alt + l
 
 # volume control
 XF86AudioRaiseVolume
-	exec ~/.config/bspwm/scripts/volume-notify.sh up
+	exec ~/.config/bspwm/scripts/volume-notify.lua up
 
 XF86AudioLowerVolume
-	exec ~/.config/bspwm/scripts/volume-notify.sh down
+	exec ~/.config/bspwm/scripts/volume-notify.lua down
 
 XF86AudioMute
-	exec ~/.config/bspwm/scripts/volume-notify.sh mute
+	exec ~/.config/bspwm/scripts/volume-notify.lua mute
 
 XF86AudioMicMute
     wpctl set-source-mute @DEFAULT_SOURCE@ toggle
@@ -63,10 +63,10 @@ XF86AudioStop
 
 # brightness control
 XF86MonBrightnessUp
-	exec ~/.config/bspwm/scripts/brightness-notify.sh up
+	exec ~/.config/bspwm/scripts/brightness-notify.lua up
 
 XF86MonBrightnessDown
-	exec ~/.config/bspwm/scripts/brightness-notify.sh down
+	exec ~/.config/bspwm/scripts/brightness-notify.lua down
 
 # screenshot
 
