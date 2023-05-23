@@ -2,7 +2,7 @@
 
 Bspwm configuration files
 
-**I am considering this project to be feature complete, but will continue to maintain these dots.**
+**This is an experimental Lua rewrite, and is not production ready! DO NOT DAILY DRIVE!**
 
 ## Dependencies
 
