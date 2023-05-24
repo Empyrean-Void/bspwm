@@ -35,9 +35,6 @@ exec $BSPDIR/scripts/bspdunst.sh &
 # Battery notifications
 exec $BSPDIR/scripts/battery-notify.sh &
 
-# Notification log
-# exec $BSPDIR/scripts/notify-log.sh ~/.log/dunst-log &
-
 #
 ## Appearance settings
 #

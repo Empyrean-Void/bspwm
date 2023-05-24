@@ -12,10 +12,10 @@ super + w
 
 # Rofi
 super + a
-	exec ~/.config/bspwm/scripts/launcher.sh
+	exec ~/.config/bspwm/scripts/launcher.py
 
 super + Escape
-    exec ~/.config/bspwm/scripts/powermenu.sh
+    exec ~/.config/bspwm/scripts/powermenu.py
 
 super + m
     exec ~/.config/bspwm/scripts/display-mode.sh
